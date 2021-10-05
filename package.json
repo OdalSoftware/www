@@ -1,0 +1,44 @@
+{
+  "name": "odal",
+  "version": "1.0.0",
+  "description": "Odal Software static page",
+  "scripts": {
+    "start": "run-p start:*",
+    "start:eleventy": "eleventy --serve",
+    "start:postcss": "postcss src/styles/*.css --dir _site --watch",
+    "build": "run-s clean build:eleventy build:postcss",
+    "build:eleventy": "cross-env ELEVENTY_PRODUCTION=true eleventy",
+    "build:postcss": "cross-env NODE_ENV=production postcss src/styles/*.css --dir _site",
+    "clean": "rimraf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OdalSoftware/www.git"
+  },
+  "keywords": [
+    "odal",
+    "odal software",
+    "www",
+    "static"
+  ],
+  "author": "Thomas Reiser",
+  "license": "GPL-3.0",
+  "homepage": "https://odal.software",
+  "bugs": {
+    "url": "https://github.com/OdalSoftware/www/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.3.5",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.8",
+    "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.8",
+    "postcss-cli": "^8.3.1",
+    "postcss-nested": "^5.0.6",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^2.2.16"
+  }
+}
