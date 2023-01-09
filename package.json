@@ -28,7 +28,7 @@
     "url": "https://github.com/OdalSoftware/www/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.2",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "autoprefixer": "^10.3.5",
     "cross-env": "^7.0.3",
